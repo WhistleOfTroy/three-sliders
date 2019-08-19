@@ -32,7 +32,7 @@ export default class App extends React.Component {
             speedValue: newspeedValue
           });
         }
-        else if (name == 'Time') (
+        else if (name == 'Speed') (
           this.setState({
             quantityValue: newQuantityValue,
             qualityValue: newQualityValue,
@@ -69,7 +69,7 @@ export default class App extends React.Component {
         <Slider minimumValue={0} maximumValue={100}
           value={this.state.speedValue}
           onValueChange={(value) => this.setState({ speedValue: value })}
-          onValueChange={(value) => slider(value, 'Price')}
+          onValueChange={(value) => slider(value, 'Speed')}
           onSlidingComplete={(value) => this.setState({ speedValue: value })}></Slider>
         <Text style={styles.valueText}>{Math.round(this.state.speedValue)} %</Text>
 
